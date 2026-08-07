@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import OptionsBar from "./OptionsBar";
+import AuthWidget from "./AuthWidget";
 
 function DaisyIcon() {
   return (
@@ -59,6 +60,7 @@ function Layout({
       <header className="site-header">
         <DaisyIcon />
         <span>minizine editor</span>
+        <AuthWidget />
       </header>
       <OptionsBar
         filename={filename}

@@ -41,6 +41,21 @@ h6 {
   padding: 16px;
 }
 
+.auth-widget {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.auth-widget-signin,
+.auth-widget {
+  margin-left: auto;
+}
+
+.auth-widget-email {
+  font-size: 0.875rem;
+}
+
 .options-bar {
   display: flex;
   align-items: center;
