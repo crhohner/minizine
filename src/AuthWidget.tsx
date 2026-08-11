@@ -1,7 +1,8 @@
 import { useAuth } from "./AuthContext";
+import { Link } from "./router";
 
 function AuthWidget() {
-  const { user, loading, signInWithGoogle, signOut } = useAuth();
+  const { user, loading, profile, signInWithGoogle, signOut } = useAuth();
 
   if (loading) return null;
 
@@ -19,7 +20,9 @@ function AuthWidget() {
 
   return (
     <div className="auth-widget">
-      <span className="auth-widget-email">{user.email}</span>
+      <Link to="/profile" className="auth-widget-email">
+        {profile?.username ?? user.email}
+      </Link>
       <button
         type="button"
         className="btn-outlined auth-widget-signout"

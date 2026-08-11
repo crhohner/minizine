@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
-import OptionsBar from "./OptionsBar";
 import AuthWidget from "./AuthWidget";
+import { Link } from "./router";
 
 function DaisyIcon() {
   return (
@@ -44,29 +44,16 @@ function DaisyIcon() {
   );
 }
 
-function Layout({
-  children,
-  filename,
-  onFilenameChange,
-  onDownload,
-}: {
-  children: ReactNode;
-  filename: string;
-  onFilenameChange: (filename: string) => void;
-  onDownload: () => void;
-}) {
+function Layout({ children }: { children: ReactNode }) {
   return (
     <>
       <header className="site-header">
-        <DaisyIcon />
-        <span>minizine editor</span>
+        <Link to="/" className="site-header-logo">
+          <DaisyIcon />
+          <span>minizine editor</span>
+        </Link>
         <AuthWidget />
       </header>
-      <OptionsBar
-        filename={filename}
-        onFilenameChange={onFilenameChange}
-        onDownload={onDownload}
-      />
       {children}
     </>
   );
