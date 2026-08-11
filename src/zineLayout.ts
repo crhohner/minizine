@@ -131,6 +131,6 @@ export async function downloadZineSheetPdf(
     SHEET_WIDTH,
     SHEET_HEIGHT,
   );
-  const safeFilename = (filename.trim() || "my zine").replace(/\s+/g, "_");
+  const safeFilename = (filename.trim() || "my minizine").replace(/\s+/g, "_");
   pdf.save(`${safeFilename}.pdf`);
 }

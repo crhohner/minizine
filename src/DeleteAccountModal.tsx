@@ -33,15 +33,15 @@ function DeleteAccountModal({ onClose }: { onClose: () => void }) {
   return (
     <div className="crop-modal-backdrop" onClick={onClose}>
       <div
-        className="delete-account-modal"
+        className="confirm-modal"
         onClick={(event) => event.stopPropagation()}
       >
-        <h2 className="delete-account-title">delete account</h2>
-        <p className="delete-account-warning">
+        <h2 className="confirm-modal-title">delete account</h2>
+        <p className="confirm-modal-warning">
           this will permanently delete your username and profile. this
           cannot be undone.
         </p>
-        <form className="delete-account-form" onSubmit={handleSubmit}>
+        <form className="confirm-modal-form" onSubmit={handleSubmit}>
           <label className="create-account-label" htmlFor="delete-confirm">
             type <strong>{expectedUsername}</strong> to confirm
           </label>

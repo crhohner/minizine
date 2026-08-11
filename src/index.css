@@ -90,7 +90,7 @@ h6 {
   border-bottom: 1px solid var(--text);
 }
 
-.options-bar-download {
+.options-bar-save {
   appearance: none;
   border: none;
   background: none;
@@ -100,6 +100,29 @@ h6 {
   align-items: center;
   padding: 0;
   margin-left: auto;
+}
+
+.options-bar-save:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.options-bar-download {
+  appearance: none;
+  border: none;
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.options-bar-error {
+  margin: 0;
+  padding: 8px 16px 0;
+  font-size: 0.875rem;
+  color: #c0392b;
 }
 
 .body {
@@ -411,6 +434,13 @@ h6 {
   margin-top: 8px;
 }
 
+.landing-page {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .profile-page {
   min-height: 60vh;
   padding: 16px;
@@ -418,14 +448,14 @@ h6 {
   flex-direction: column;
 }
 
-.profile-footer {
+.page-footer {
   margin-top: auto;
   display: flex;
   justify-content: center;
   padding-top: 16px;
 }
 
-.delete-account-modal {
+.confirm-modal {
   background: var(--bg);
   border: 2px solid var(--text);
   border-radius: 12px;
@@ -437,16 +467,16 @@ h6 {
   max-width: 360px;
 }
 
-.delete-account-title {
+.confirm-modal-title {
   margin: 0;
 }
 
-.delete-account-warning {
+.confirm-modal-warning {
   margin: 0;
   font-size: 0.875rem;
 }
 
-.delete-account-form {
+.confirm-modal-form {
   display: flex;
   flex-direction: column;
   gap: 8px;

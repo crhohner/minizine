@@ -9,10 +9,10 @@ function ProfileFooter() {
   if (!profile) return null;
 
   return (
-    <footer className="profile-footer">
+    <footer className="page-footer">
       <button
         type="button"
-        className="btn-outlined profile-footer-delete"
+        className="btn-outlined page-footer-delete"
         onClick={() => setShowDeleteModal(true)}
       >
         delete account
