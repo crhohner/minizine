@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { useAuth } from "./AuthContext";
+import "./CreateAccountPage.css";
 
 const USERNAME_PATTERN = /^[a-zA-Z0-9_]+$/;
 

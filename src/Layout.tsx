@@ -54,7 +54,7 @@ function Layout({ children }: { children: ReactNode }) {
         </Link>
         <AuthWidget />
       </header>
-      {children}
+      <main className="site-main">{children}</main>
     </>
   );
 }

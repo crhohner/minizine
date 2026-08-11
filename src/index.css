@@ -34,6 +34,18 @@ h6 {
   color: var(--text-h);
 }
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .site-header {
   display: flex;
   align-items: center;
@@ -66,245 +78,6 @@ h6 {
   text-decoration: none;
 }
 
-.options-bar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-top: 2px solid var(--text);
-  border-bottom: 2px solid var(--text);
-}
-
-.options-bar-filename {
-  appearance: none;
-  border: none;
-  background: none;
-  color: var(--text);
-  font-family: var(--comic-sans);
-  font-size: inherit;
-  padding: 0;
-}
-
-.options-bar-filename:focus {
-  outline: none;
-  border-bottom: 1px solid var(--text);
-}
-
-.options-bar-save {
-  appearance: none;
-  border: none;
-  background: none;
-  color: var(--text);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 0;
-  margin-left: auto;
-}
-
-.options-bar-save:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
-
-.options-bar-download {
-  appearance: none;
-  border: none;
-  background: none;
-  color: var(--text);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 0;
-}
-
-.options-bar-error {
-  margin: 0;
-  padding: 8px 16px 0;
-  font-size: 0.875rem;
-  color: #c0392b;
-}
-
-.body {
-  padding: 16px;
-}
-
-.workspace {
-  display: flex;
-  align-items: stretch;
-  gap: 16px;
-}
-
-.image-upload {
-  border: 2px solid var(--text);
-  border-radius: 12px;
-  padding: 16px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  overflow: hidden;
-}
-
-.preview-column {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  flex: 2;
-}
-
-.book-preview {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border: 2px solid var(--text);
-  border-radius: 12px;
-  padding: 16px;
-}
-
-.book-preview-pages {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-}
-
-.book-preview-page {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  flex-shrink: 0;
-}
-
-.book-preview-page--blank {
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.book-preview-page-blank-label {
-  color: teal;
-  padding: 0 8px;
-}
-
-.book-preview-page-image {
-  position: absolute;
-  max-width: none;
-}
-
-.book-preview-arrow {
-  appearance: none;
-  border: none;
-  background: none;
-  color: var(--text);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 4px;
-}
-
-.book-preview-arrow:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
-
-.book-preview-empty {
-  margin: 0;
-  color: var(--text);
-}
-
-.zine-sheet {
-  border: 2px solid var(--text);
-  border-radius: 12px;
-  padding: 16px;
-}
-
-.zine-sheet-canvas {
-  display: block;
-  width: 60%;
-  height: auto;
-  margin: 0 auto;
-}
-
-.image-upload-list {
-  list-style: none;
-  margin: 8px 0 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
-}
-
-.image-upload-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 4px;
-  cursor: grab;
-}
-
-.image-upload-item--overlay {
-  cursor: grabbing;
-  background: var(--bg);
-  border: 2px solid var(--text);
-  border-radius: 8px;
-}
-
-.image-upload-preview {
-  width: 48px;
-  height: 48px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.image-upload-name {
-  flex: 1;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  min-width: 0;
-}
-
-.image-upload-remove,
-.image-upload-crop {
-  appearance: none;
-  border: none;
-  background: none;
-  color: var(--text);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 0;
-}
-
-.image-upload-trigger {
-  display: inline-block;
-  cursor: pointer;
-}
-
-.image-upload-trigger--disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.image-upload-input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-}
-
-.image-upload-empty {
-  margin: 8px 0 0;
-  color: var(--text);
-}
-
 .btn-filled {
   appearance: none;
   border-radius: 14px;
@@ -325,81 +98,10 @@ h6 {
   font-family: var(--comic-sans);
 }
 
-.crop-modal-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-}
-
-.crop-modal {
-  background: var(--bg);
-  border: 2px solid var(--text);
-  border-radius: 12px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-width: min(500px, 90vw);
-  max-height: 90vh;
-}
-
-.crop-modal-canvas {
-  max-width: 100%;
-  max-height: 70vh;
-}
-
-.crop-modal-canvas img {
-  display: block;
-  max-width: 100%;
-}
-
-.crop-modal-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-}
-
-.create-account {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-}
-
-.create-account-box {
-  width: 100%;
-  max-width: 360px;
-  border: 2px solid var(--text);
-  border-radius: 12px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.create-account-title {
-  margin: 0;
-  text-align: center;
-}
-
-.create-account-subtitle {
-  margin: 0;
-  text-align: center;
-  font-size: 0.875rem;
-}
-
-.create-account-form {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 8px;
-}
-
+/*
+ * Shared form-field styling, reused across CreateAccountPage,
+ * DeleteAccountModal, DeleteZineModal, and SavedZines' search input.
+ */
 .create-account-label {
   font-size: 0.875rem;
 }
@@ -425,34 +127,24 @@ h6 {
   color: #c0392b;
 }
 
-.create-account-submit {
-  margin-top: 4px;
-}
-
-.create-account-signout {
-  align-self: center;
-  margin-top: 8px;
-}
-
-.landing-page {
-  min-height: 60vh;
+/*
+ * Shared modal primitives, reused across ImageCropModal,
+ * DeleteAccountModal, and DeleteZineModal.
+ */
+.crop-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 100;
 }
 
-.profile-page {
-  min-height: 60vh;
-  padding: 16px;
+.crop-modal-actions {
   display: flex;
-  flex-direction: column;
-}
-
-.page-footer {
-  margin-top: auto;
-  display: flex;
-  justify-content: center;
-  padding-top: 16px;
+  justify-content: flex-end;
+  gap: 8px;
 }
 
 .confirm-modal {
@@ -480,4 +172,12 @@ h6 {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+/* Shared footer, reused by ProfileFooter and ZineFooter. */
+.page-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px;
 }

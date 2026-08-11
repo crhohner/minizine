@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
+import { useAuth } from "./AuthContext";
 import { deleteZine } from "./lib/zines";
 
 function DeleteZineModal({
@@ -11,14 +12,16 @@ function DeleteZineModal({
   onClose: () => void;
   onDeleted: () => void;
 }) {
+  const { user } = useAuth();
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
+    if (!user) return;
     setSubmitting(true);
     setError(null);
-    const { error: deleteError } = await deleteZine(zineId);
+    const { error: deleteError } = await deleteZine(zineId, user.id);
     if (deleteError) {
       setSubmitting(false);
       setError(deleteError);

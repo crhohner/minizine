@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { UploadedImage } from "./ImageUpload";
 import { SHEET_WIDTH, SHEET_HEIGHT, drawZineSheet } from "./zineLayout";
+import "./ZineSheet.css";
 
 function useLoadedImages(images: UploadedImage[]) {
   const requested = useRef<Set<string>>(new Set());

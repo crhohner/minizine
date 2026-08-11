@@ -1,3 +1,5 @@
+import "./OptionsBar.css";
+
 function DownloadIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
@@ -43,14 +45,14 @@ function OptionsBar({
   onDownload,
   onSave,
   saving,
-  saveDisabled,
+  saveDisabledReason,
 }: {
   filename: string;
   onFilenameChange: (filename: string) => void;
   onDownload: () => void;
   onSave: () => void;
   saving: boolean;
-  saveDisabled: boolean;
+  saveDisabledReason: string | null;
 }) {
   return (
     <div className="options-bar">
@@ -65,9 +67,9 @@ function OptionsBar({
         type="button"
         className="options-bar-save"
         onClick={onSave}
-        disabled={saving || saveDisabled}
+        disabled={saving || saveDisabledReason !== null}
         aria-label="Save minizine"
-        title={saveDisabled ? "sign in to save" : undefined}
+        title={saveDisabledReason ?? undefined}
       >
         <SaveIcon />
       </button>

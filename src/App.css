@@ -1,0 +1,19 @@
+.workspace {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.preview-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 2;
+}
+
+.options-bar-error {
+  margin: 0;
+  padding: 8px 16px 0;
+  font-size: 0.875rem;
+  color: #c0392b;
+}

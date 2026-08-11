@@ -1,0 +1,12 @@
+.zine-sheet {
+  border: 2px solid var(--text);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.zine-sheet-canvas {
+  display: block;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+}

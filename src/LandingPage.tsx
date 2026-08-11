@@ -1,12 +1,12 @@
-import { navigate } from "./RouterContext";
+import "./LandingPage.css";
 
-function LandingPage() {
+function LandingPage({ onCreateNew }: { onCreateNew: () => void }) {
   return (
     <div className="landing-page">
       <button
         type="button"
         className="btn-filled landing-page-create"
-        onClick={() => navigate("/edit")}
+        onClick={onCreateNew}
       >
         create new
       </button>

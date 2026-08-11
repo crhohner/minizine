@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import Cropper from "cropperjs";
 import "cropperjs/dist/cropper.css";
+import "./ImageCropModal.css";
 import type { CropData, UploadedImage } from "./ImageUpload";
 import { CROP_ASPECT_RATIO } from "./ImageUpload";
 

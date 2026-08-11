@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import type { UploadedImage } from "./ImageUpload";
 import { MAX_IMAGES } from "./ImageUpload";
+import "./BookPreview.css";
 
 const PAGE_WIDTH = 220;
 const PAGE_HEIGHT = Math.round((PAGE_WIDTH * 17) / 11);

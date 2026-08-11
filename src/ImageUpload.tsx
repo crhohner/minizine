@@ -17,6 +17,7 @@ import {
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import ImageCropModal from "./ImageCropModal";
+import "./ImageUpload.css";
 
 export const CROP_ASPECT_RATIO = 11 / 17;
 
